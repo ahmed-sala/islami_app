@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app/hadeeth_tab/hadeet.dart';
-import 'package:islami_app/myColors.dart';
-import 'package:islami_app/radio_tab/radio.dart';
-import 'package:islami_app/sebha_tab/sebha.dart';
+import 'package:islami_app/home/hadeeth_tab/hadeet.dart';
+import 'package:islami_app/home/quran_tab/quran.dart';
+import 'package:islami_app/home/radio_tab/radio.dart';
+import 'package:islami_app/home/sebha_tab/sebha.dart';
 
 class HomeScreen extends StatefulWidget {
   static const routeName = 'home';
@@ -24,20 +24,15 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       child: Scaffold(
-        backgroundColor: Colors.transparent,
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
           elevation: 0,
           title: Text(
             'islami',
-            style: TextStyle(
-                color: Colors.black, fontSize: 30, fontWeight: FontWeight.w500),
           ),
-          centerTitle: true,
         ),
         bottomNavigationBar: Theme(
           data: Theme.of(context).copyWith(
-            canvasColor: MyColor.primaryColor,
+            canvasColor: Theme.of(context).primaryColor,
           ),
           child: BottomNavigationBar(
             currentIndex: selectedIndex,
@@ -45,17 +40,6 @@ class _HomeScreenState extends State<HomeScreen> {
               selectedIndex = index;
               setState(() {});
             },
-            selectedIconTheme: IconThemeData(
-              color: Colors.black,
-            ),
-            unselectedIconTheme: IconThemeData(
-              color: Colors.white,
-            ),
-            selectedLabelStyle: TextStyle(
-              color: Colors.black,
-            ),
-            selectedItemColor: Colors.black,
-            unselectedItemColor: Colors.white,
             items: [
               BottomNavigationBarItem(
                   icon: ImageIcon(AssetImage('assets/images/ic_quran.png')),
@@ -77,5 +61,5 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  List<Widget> tabs = [quran_tab(), hadeeth_tab(), sebha_tab(), radio_tab()];
+  List<Widget> tabs = [Quran_tab(), hadeeth_tab(), sebha_tab(), radio_tab()];
 }
