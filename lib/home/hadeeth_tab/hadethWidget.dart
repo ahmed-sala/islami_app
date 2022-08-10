@@ -15,14 +15,19 @@ class HadeethWidget extends StatelessWidget {
             arguments: hadeeth(title: title, content: content));
       },
       child: Container(
+          padding: EdgeInsets.symmetric(vertical: 5),
+          decoration: BoxDecoration(
+              border: Border.symmetric(
+                  horizontal:
+                      BorderSide(color: Theme.of(context).primaryColor))),
           child: Text(
-        title,
-        textAlign: TextAlign.center,
-        style: Theme.of(context)
-            .textTheme
-            .headline5
-            ?.copyWith(fontWeight: FontWeight.bold),
-      )),
+            title,
+            textAlign: TextAlign.center,
+            style: Theme.of(context)
+                .textTheme
+                .headline5
+                ?.copyWith(fontWeight: FontWeight.bold),
+          )),
     );
   }
 }

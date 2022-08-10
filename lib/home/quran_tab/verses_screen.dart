@@ -12,6 +12,7 @@ class VerseWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 6),
       child: Text(
         '{${index}}' + title,
+        textDirection: TextDirection.rtl,
         style: Theme.of(context).textTheme.bodyText1,
         textAlign: TextAlign.center,
       ),

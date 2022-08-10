@@ -3,6 +3,6 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/splash_light" />
+            android:src="@drawable/splash_dark" />
     </item>
 </layer-list>
